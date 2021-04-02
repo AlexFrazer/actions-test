@@ -1,6 +1,7 @@
 module.exports = (api) => {
   const isTest = api.env("test");
   const isDev = api.env("development");
+
   return {
     presets: [
       [
@@ -9,7 +10,6 @@ module.exports = (api) => {
           targets: {
             browsers: ["last 2 versions"],
           },
-          // modules: isTest === "test" ? "commonjs" : false,
         },
       ],
       require.resolve("@babel/preset-typescript"),

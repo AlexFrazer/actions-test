@@ -13,6 +13,10 @@ const config: Configuration = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".mjs"],
+    alias: {
+      react: require.resolve("react"),
+      "react-dom": require.resolve("react-dom"),
+    },
   },
   module: {
     rules: [
